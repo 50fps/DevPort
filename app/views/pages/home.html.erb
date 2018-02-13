@@ -3,7 +3,7 @@
 
 <h4>BLogs:</h4>
 
-<%= @posts.map do |post| %>
+<% @posts.map do |post| %>
 	<h3><%= post.title %></h3>
 	<p><%= post.body %></p>
 	<hr />
@@ -11,7 +11,7 @@
 
 <h4>Skills:</h4>
 
-<%= @skills.map do |post| %>
+<% @skills.map do |post| %>
 	<h3><%= post.title %></h3>
 	<p><%= post.percent_utilized %></p>
 	<hr />
