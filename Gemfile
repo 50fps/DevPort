@@ -50,3 +50,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data'
 gem 'friendly_id', '~> 5.1.0'
+gem 'devise', '~> 4.4', '>= 4.4.1'
