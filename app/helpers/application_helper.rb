@@ -15,4 +15,8 @@ module ApplicationHelper
 			content_tag(:p, greeting, class: "source-greeting")
 		end 
   end
+
+  def copyright_generator
+    MockeViewTool::Renderer.copyright 'Damian Mocke', 'All rights reserved'
+  end
 end
