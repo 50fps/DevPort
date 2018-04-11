@@ -1,6 +1,9 @@
 class PortfoliosController < ApplicationController
   before_action :set_portfolio_item, only: [:show, :edit, :update, :destroy]
+  # set layout to app/views/layouts/portfolio.html.erb
   layout "portfolio"
+  # Petergate gem authorization
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   
 	def index
 		@portfolio_items = Portfolio.all
