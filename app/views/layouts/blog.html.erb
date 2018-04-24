@@ -14,24 +14,22 @@
 
   <body>
 
-    <!-- NAVIGATION -->
-    <div class="blog-masthead">
+    <%= render 'shared/blog_nav' %>
+
+    <!-- HEADER -->
+    <div class="blog-header">
       <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">About</a>
-          <a class="nav-link" href="#">Contact</a>
-          <a class="nav-link" href="#">Blog</a>
-          <a class="nav-link" href="#">Portfolio</a>
-        </nav>
+        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <p class="lead blog-description">An example blog template built with Bootstrap.</p>
       </div>
     </div>
 
     <!-- MAIN -->
     <main role="main" class="container">
+    <!-- Container -->
       <div class="row">
+      <!-- Row -->
 
-        <%= login_helper %>
         <%= yield %>
 
         <!-- SIDEBAR -->
