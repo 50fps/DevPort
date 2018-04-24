@@ -117,8 +117,10 @@ body {
 
 .auth-links     {margin-top:10px;}
 .auth-links a   {color: #000;margin-top: 10px;}
+.register-text  {text-align: right;}
 .about-image    {height: 200px;width: 95%;}
 .contact-form   {margin-top: 100px;margin-bottom: 50px;}
 .contact-info   {color: var(--gray)}
 .google-maps    {width: 100%; height: 400px;margin-top: 25px;margin-bottom: 25px;}
 .card-body      {color: #000;text-align: left;}
+.login > .card  {width: 22em;margin: 0 auto;float: none;}
