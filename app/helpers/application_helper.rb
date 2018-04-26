@@ -16,6 +16,12 @@ module ApplicationHelper
 		end 
   end
 
+  def welcome_helper
+    if logged_in?(:site_admin)
+      "Admin"
+    end
+  end
+
   def copyright_generator
     MockeViewTool::Renderer.copyright 'Damian Mocke', 'All rights reserved'
   end
