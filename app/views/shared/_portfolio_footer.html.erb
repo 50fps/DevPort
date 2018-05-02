@@ -1,7 +1,14 @@
 <footer class="text-muted">
   <div class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-		<p>
+  <% if params[:action] == "show" && params[:controller] == "portfolios" %>
+
+    <p class="col-md-5 float-right">
+    	<%= link_to "View all Portfolio Items", portfolios_path %> /
+    	<a href="#">Back to top</a>
+    </p>
+
+   <% end %>
+		<p class= "col-md-7">
 			<%= copyright_generator %>
 		</p>
   </div>

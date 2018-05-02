@@ -23,6 +23,7 @@
   <!-- MASTHEAD -->
     <%= render 'shared/portfolio_masthead' %>
   <!--//MASTHEAD -->
+    <%= yield %>
 
     </main>
 
@@ -30,7 +31,6 @@
     <%= render 'shared/portfolio_footer' %>
   <!--//FOOTER -->
 
-    <%= yield %>
     <%= source_helper("application") %>
 
   </body>
