@@ -14,23 +14,14 @@
 
   <body>
 
-  <!-- NAVIGATION -->
     <%= render 'shared/portfolio_nav' %>
-  <!--//NAVIGATION -->
 
     <main role="main">
-
-  <!-- MASTHEAD -->
-    <%= render 'shared/portfolio_masthead' %>
-  <!--//MASTHEAD -->
-    <%= yield %>
-
+      <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
+      <%= yield %>
     </main>
 
-  <!-- FOOTER -->
     <%= render 'shared/portfolio_footer' %>
-  <!--//FOOTER -->
-
     <%= source_helper("application") %>
 
   </body>
