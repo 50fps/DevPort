@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "jquery-ui";
 
 :root {
   --jumbotron-padding-y: 3rem;
@@ -47,3 +48,5 @@ footer p {
 .portfolio-form {
   padding: 20px;
 }
+
+.card-ui {}
