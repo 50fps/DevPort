@@ -11,7 +11,6 @@
  */
 'use strict';
 
-alert('Sortable is Working!');
 
 (function ($) {
   var dragging, draggingHeight, placeholders = $();
