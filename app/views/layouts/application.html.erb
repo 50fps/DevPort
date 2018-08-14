@@ -15,7 +15,15 @@
 
   <body>
 
-    <div id="background"></div>
+    <%= video_tag(
+        'HardDrivePhotojpeg.mp4',
+        id: 'background',
+        autoplay: true,
+        loop: true,
+        muted: true,
+        poster: 'stripes.jpg'
+      )
+    %>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
       <%= render 'shared/application_nav' %>
