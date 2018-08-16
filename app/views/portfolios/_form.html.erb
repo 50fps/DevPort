@@ -1,4 +1,4 @@
-<%= form_for(portfolio_item) do |form| %>
+<%= form_for(@portfolio_item) do |form| %>
 <div class="row">
   <div class="col-md-6">
     <div class="form-group">
@@ -40,12 +40,13 @@
   <h2>Technologies Used:</h2>
 
   <div>
-    <%= form.fields_for :technologies do |tech| %>
-    <div class="form-group">
-      <%= tech.label :name %>
-      <%= tech.text_field :name, class: 'form-control' %>
-    </div>
+    <%= form.fields_for :technologies do |technology_form| %>
+      <%= render 'technology_fields', f: technology_form %>
     <% end %>
+  </div>
+
+  <div>
+    <%= link_to_add_association 'Add Technology', form, :technologies %>
   </div>
 
   <div class="actions">
