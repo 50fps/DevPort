@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "gritter";
 
 /*
  * Globals
@@ -114,6 +115,11 @@ body {
 /*
  * Custom Styles
  */
+
+.gritter-title, .gritter-item p {font-family: Arial}
+
+
+
 #background {
   position: fixed;
   min-width: 100%;
