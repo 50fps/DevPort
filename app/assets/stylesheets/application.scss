@@ -116,16 +116,12 @@ body {
  */
 #background {
   position: fixed;
-  /*top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%) translate(-50%);
-  transform: translate(-50%) translate(-50%);*/
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
   z-index: -100;
-  background: image-url('stripes.jpg') no-repeat;
+  /*background: image-url('stripes.jpg') no-repeat;*/
   background-size: cover;
 }
 
