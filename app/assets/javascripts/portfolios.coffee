@@ -1,4 +1,4 @@
-eady = undefined
+ready = undefined
 set_positions = undefined
 
 set_positions = ->
