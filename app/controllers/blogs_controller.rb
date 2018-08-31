@@ -8,7 +8,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    @blogs = Blog.page(params[:page]).per(5).ascending
     @page_title = "DevPort | Blog"
   end
 
