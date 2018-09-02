@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_topics, only: [:index, :show, :edit]
+  before_action :set_sidebar_topics, only: [:index, :show, :edit, :new]
   # set layout to app/views/layouts/blog.html.erb
   layout "blog"
   # Petergate gem authorization
@@ -82,6 +84,23 @@ class BlogsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
       @blog = Blog.friendly.find(params[:id])
+    end
+
+    def set_topics
+      @topics = Topic.all
+    end
+
+    def set_sidebar_topics
+      @sidebar_topics = []
+      @topics = Topic.all
+
+      @topics.each do |topic|
+        if topic.blogs.length > 0 
+          @sidebar_topics << topic
+        end
+      end
+
+      @sidebar_topics
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

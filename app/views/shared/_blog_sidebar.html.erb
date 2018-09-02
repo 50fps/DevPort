@@ -5,6 +5,15 @@
   </div>
 
   <div class="p-3">
+    <h4 class="font-italic">Explore Topics</h4>
+    <ol class="list-unstyled">
+      <% @sidebar_topics.each do |topic| %>
+        <li><%= link_to topic.title, topic_show_path(topic) %></li>
+      <% end %>
+    </ol>
+  </div>
+
+  <div class="p-3">
     <h4 class="font-italic">Elsewhere</h4>
     <ol class="list-unstyled social-links">
       <li><a href="https://github.com/50fps" target="_blank"><%= fa_icon "github" %></a></li>
