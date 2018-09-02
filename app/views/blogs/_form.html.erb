@@ -25,6 +25,14 @@
 <% end %>
 
   <div class="form-group">
+    <%= f.select :topic_id do %>
+      <% @topic_options.each do |option| %>
+        <%= content_tag(:option, option.first, value: option.last) %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="form-group">
     <%= f.submit "Submit", class: 'btn btn-primary' %>
   </div>
 <% end %>

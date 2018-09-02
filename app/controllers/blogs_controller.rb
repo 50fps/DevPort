@@ -2,6 +2,7 @@ class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
   before_action :set_topics, only: [:index, :show, :edit]
   before_action :set_sidebar_topics, only: [:index, :show, :edit, :new]
+  before_action :set_topic_options, only: [:edit, :new]
   # set layout to app/views/layouts/blog.html.erb
   layout "blog"
   # Petergate gem authorization
@@ -103,8 +104,19 @@ class BlogsController < ApplicationController
       @sidebar_topics
     end
 
+    def set_topic_options
+      @topic_options = []
+      @topics = Topic.all
+      
+      @topics.each.with_index(1) do |value, index|
+        @topic_options << [value.title, index]
+      end
+
+      @topic_options
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body, :status)
+      params.require(:blog).permit(:title, :body, :status, :topic_id)
     end
 end
