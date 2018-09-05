@@ -80,4 +80,15 @@ module ApplicationHelper
     js add_gritter(msg, title: "Notice", sticky: false)
   end
 
+  def progress_helper
+    @progress = ''
+    @skills = Skill.all
+
+    @skills.each do |skill|
+     @progress << "<h6>#{skill.title}</h6><div class='progress skill'><div class='progress-bar' role='progressbar' style='width:#{skill.percent_utilized}%' aria-valuenow='#{skill.percent_utilized}' aria-valuemin='0' aria-valuemax='100'>#{skill.percent_utilized}</div></div>"
+    end
+    
+    @progress.html_safe
+  end
+
 end

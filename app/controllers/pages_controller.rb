@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
+  before_action :set_skills, only: [:home, :about]
+
   def home
   	@posts = Blog.all
-  	@skills = Skill.all
   end
 
   def about
+
   end
 
   def contact
@@ -13,4 +15,11 @@ class PagesController < ApplicationController
   def tech_news
   	@tweets = SocialTool.twitter_search
   end
+
+  private
+
+  def set_skills
+    @skills = Skill.all
+  end
+
 end
