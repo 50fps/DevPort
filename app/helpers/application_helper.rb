@@ -9,10 +9,11 @@ module ApplicationHelper
     end 
   end
 # passing the 'layout_name' variable is optional & is used to give specific attention to views
-  def source_helper(layout_name)
+  def source_helper
 		if session[:source] 
-			greeting = "Thanks for visiting me from  #{ session[:source] }, layout: #{layout_name}"
-			content_tag(:p, greeting, class: "source-greeting")
+			greeting = "Thanks for visiting me from  #{ session[:source] }"
+			#content_tag(:p, greeting, class: "source-greeting")
+      js add_gritter(greeting, title: "Welcome", sticky: false)
 		end 
   end
 
